@@ -148,6 +148,13 @@ const accountSettingsRoutes = [
     name="Avatar"
     component={errorHandler(AccountAvatar)}
   />,
+
+  <Route
+    key="authorizations/"
+    path="authorizations/"
+    componentPromise={() => import('./views/settings/account/accountAuthorizations')}
+    component={errorHandler(LazyLoad)}
+  />,
 ];
 
 const projectSettingsRoutes = [
